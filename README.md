@@ -1,0 +1,2 @@
+# WindowsUpdatePS
+powershellで自動windows updateしたいしリモートで実行したい
