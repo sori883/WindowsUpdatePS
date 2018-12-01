@@ -6,10 +6,10 @@ function Enable-AutoLogon(){
 
     #>
 
-    Set-ItemProperty -path $regLogonKey -name "AutoAdminLogon" -value 1
-    Set-ItemProperty -path $regLogonKey -name "DefaultUsername" -value $LogonUser
-    Set-ItemProperty -path $regLogonKey -name "DefaultPassword" -value $LogonPass
+    Set-ItemProperty -path $RegLogonKey -name "AutoAdminLogon" -value 1
+    Set-ItemProperty -path $RegLogonKey -name "DefaultUsername" -value $LogonUser
+    Set-ItemProperty -path $RegLogonKey -name "DefaultPassword" -value $LogonPass
     if ($LogonDomain -ne "") {
-        Set-ItemProperty -path $regLogonKey -name "DefaultDomainName" -value $LogonDomain
+        Set-ItemProperty -path $RegLogonKey -name "DefaultDomainName" -value $LogonDomain
     }
 }

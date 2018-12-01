@@ -2,7 +2,7 @@
 set-variable -name ConfRoot -value (Split-Path $MyInvocation.MyCommand.Path -Parent) -option constant
 
 # ログのパス
-Set-Variable -Name LogPath -Value ("{0}\History\History.txt" -f $ConfRoot) -Option Constant
+Set-Variable -Name HistoryPath -Value ("{0}\History\History.txt" -f $ConfRoot) -Option Constant
 
 #-- Windows Updateインストール設定 start --#
 
@@ -27,7 +27,7 @@ Set-Variable -Name TaskExecutePass -Value "UserPassword" -Option Constant
 #-- 自動ログオン設定 start --#
 
 #  レジストリパス
-Set-Variable -Name regLogonKey -Value "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Option Constant
+Set-Variable -Name RegLogonKey -Value "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Option Constant
 # ログオンユーザー
 Set-Variable -Name LogonUser -Value "Logonuser" -Option Constant
 # ログオンユーザーパスワード

@@ -5,16 +5,20 @@ function Install-WindowsUpdate(){
     .DESCRIPTION
 
     #>
-    Start-Transcript $LogPath -append
 
+    # PSWindowsUpdateをPowerShellモジュールの格納先へコピー
     if(-not (Test-Path ("{0}\{1}" -f $PSModulePath, $PSWindowsUpdateModuleName))){
         New-Item ("{0}\{1}" -f $PSModulePath, $PSWindowsUpdateModuleName) -ItemType Directory
         robocopy $PSWindowsUpdateModulePath ("{0}\{1}" -f $PSModulePath, $PSWindowsUpdateModuleName) /MIR
     }
 
+    # タスク登録
     if(-not (Test-InstallWindowsUpdateTask)){
         Register-InstallWindowsUpdateTask
     }
+
+    #ログ開始
+    Start-Transcript $HistoryPath -append
 
     # Windows Updateをダウンロード
     $microsoftPatch = Get-WUList -MicrosoftUpdate
@@ -22,7 +26,7 @@ function Install-WindowsUpdate(){
     $windowsServerPatch = Get-WUList
 
     if ($windowsServerPatch -or $microsoftPatch -or $windowsPatch) {
-        #自動ログイン設定
+        # 自動ログイン有効化
         Enable-AutoLogon
         # Windows Updateをインストール
         if($microsoftPatch){
@@ -36,8 +40,11 @@ function Install-WindowsUpdate(){
         }
         shutdown -r -t 0 -f
     } else {
-        Remove-InstallWindowsUpdateTask
+        # ログ終了
         Stop-Transcript
+        # タスク削除
+        Remove-InstallWindowsUpdateTask
+        #自動ログイン無効化
         Disable-AutoLogon
     }
 }

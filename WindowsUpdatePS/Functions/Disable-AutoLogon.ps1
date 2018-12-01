@@ -1,10 +1,10 @@
 function Disable-AutoLogon(){
     <#
     .SYNOPSIS
-    自動ログインを無効にします.
+    WindowsUpdate終了後に自動ログインを無効にします.
     .DESCRIPTION
 
     #>
 
-    Set-ItemProperty -path $regLogonKey -name "AutoAdminLogon" -value 0
+    Set-ItemProperty -path $RegLogonKey -name "AutoAdminLogon" -value 0
 }
