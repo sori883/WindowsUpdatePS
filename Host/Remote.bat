@@ -10,7 +10,7 @@ set LogonUser=LoginUser
 rem ログインユーザのパスワード
 set LogonPass=LogonPass
 rem クライアントからみた実行するファイルのパス
-set StartPath=C:\WindowsUpdatePS\
+set StartPath=C:\AWPS\
 
 cd /d %~dp0\PSTools
 
