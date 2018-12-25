@@ -1,9 +1,9 @@
-function Test-InstallWindowsUpdateTask(){
+function Test-RetryTask(){
     <#
     .SYNOPSIS
-    Windows Updateを適用するタスクが登録されているか確認します.
+
     .DESCRIPTION
-    確認するタスクはInstall-WindowsUpdateによって登録されます.
+
     #>
 
     $task = $null

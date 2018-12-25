@@ -11,9 +11,8 @@ function Install-AW(){
     Start-Transcript ("{0}\Command.log" -f $HistoryPath) -append
 
     # タスク登録
-    if(-not (Test-InstallWindowsUpdateTask)){
-        "s@pld:a;skl"
-        Register-InstallWindowsUpdateTask
+    if(-not (Test-RetryTask)){
+        Register-RetryTask
     }
     Enable-AutoLogon
 
@@ -91,7 +90,7 @@ function Install-AW(){
     }
     
     if((($compPt -eq "comp") -and ($compWu -eq "comp")) -or (($tryPt -ge $MaxRetryCount) -and ($tryWu -ge $MaxRetryCount))){
-        Remove-InstallWindowsUpdateTask
+        Remove-RetryTask
     }
     Stop-Transcript
 }

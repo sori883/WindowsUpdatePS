@@ -1,4 +1,4 @@
-function Remove-InstallWindowsUpdateTask(){
+function Remove-RetryTask(){
     <#
     .SYNOPSIS
     .DESCRIPTION

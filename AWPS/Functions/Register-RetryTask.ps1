@@ -1,4 +1,4 @@
-function Register-InstallWindowsUpdateTask(){
+function Register-RetryTask(){
     <#
     .SYNOPSIS
 
