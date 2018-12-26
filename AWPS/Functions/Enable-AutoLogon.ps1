@@ -1,7 +1,7 @@
 function Enable-AutoLogon(){
     <#
     .SYNOPSIS
-    マシン起動時に自動ログオンするように設定します.
+    自動ログインを有効化します
     .DESCRIPTION
 
     #>

@@ -1,7 +1,7 @@
 function Disable-AutoLogon(){
     <#
     .SYNOPSIS
-    WindowsUpdate終了後に自動ログインを無効にします.
+    自動ログイン設定を無効化します
     .DESCRIPTION
 
     #>
