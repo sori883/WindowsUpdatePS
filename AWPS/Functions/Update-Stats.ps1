@@ -1,7 +1,7 @@
 function Update-Stats($target, $stats){
     <#
     .SYNOPSIS
-    
+    設定ファイルの進捗状況を更新します
     .DESCRIPTION
 
     #>

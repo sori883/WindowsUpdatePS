@@ -1,7 +1,7 @@
 function Register-RetryTask(){
     <#
     .SYNOPSIS
-
+    再試行タスクをタスクスケジューラに登録します
     .DESCRIPTION
 
     #>

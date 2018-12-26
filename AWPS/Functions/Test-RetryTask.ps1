@@ -1,7 +1,7 @@
 function Test-RetryTask(){
     <#
     .SYNOPSIS
-
+    再試行タスクがタスクスケジューラに存在するか確認します
     .DESCRIPTION
 
     #>
