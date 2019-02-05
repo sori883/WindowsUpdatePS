@@ -1,9 +1,5 @@
 ## AutoWindowsUpdateAndAdobeUpdate
-自動でWindowsUpdateを行います。  
-Adobe Readerも当てなければいけなくなりました  
-たまにしか使わない端末のアップデートを時間かけてしちゃやーよとのことでした。  
-
-また試行回数もつけました。  
+自動でWindowsUpdateを行います。   
 なんてこったい  
 
 ## 使い方
@@ -14,10 +10,12 @@ Adobe Readerも当てなければいけなくなりました
 
 ***ホストからクライアントへリモートでWindowsUpdateとAdobeのパッチを適用する場合***
 1.Config.ps1へログインユーザ等の設定を書きます。  
-2.AWPSを予めクライアントに設置します。（C:\AWPSを想定しています）  
-3.Host\Remote.batにクライアントのホスト名とログイン情報を設定して実行します。  
+2.AWPSを予めクライアントに設置します。（C:\WUPSを想定しています。変更する場合はRemote.batのStartPathを変更してください。）  
+3.Remote.batにログインユーザ等の設定を書きます。  
+4.target.txtにクライアントのIPとかを指定してRemote.batを実行してください。  
 
 ## OS
+Windows 7
 Windows 10  
 
 ## 起動はWOLでやろう！
