@@ -19,9 +19,9 @@ Set-Variable -Name TaskName -Value "WindowsUpdatePS" -Option Constant
 # PowerShellの実行パス
 Set-Variable -Name PowerShellExePath -Value ("{0}\Start.bat" -f $ConfRoot) -Option Constant
 # タスク実行ユーザー
-Set-Variable -Name TaskExecuteUser -Value "const" -Option Constant
+Set-Variable -Name TaskExecuteUser -Value "username" -Option Constant
 # タスク実行ユーザーパスワード
-Set-Variable -Name TaskExecutePass -Value "antenakouzi12" -Option Constant
+Set-Variable -Name TaskExecutePass -Value "password" -Option Constant
 
 #-- リトライタスク設定 end --#
 
@@ -30,11 +30,11 @@ Set-Variable -Name TaskExecutePass -Value "antenakouzi12" -Option Constant
 #  レジストリパス
 Set-Variable -Name RegLogonKey -Value "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Option Constant
 # ログオンユーザー
-Set-Variable -Name LogonUser -Value "const" -Option Constant
+Set-Variable -Name LogonUser -Value "username" -Option Constant
 # ログオンユーザーパスワード
-Set-Variable -Name LogonPass -Value "antenakouzi12" -Option Constant
+Set-Variable -Name LogonPass -Value "password" -Option Constant
 # ログオンユーザーのドメイン
-Set-Variable -Name LogonDomain -Value "" -Option Constant
+Set-Variable -Name LogonDomain -Value "somedomain" -Option Constant
 
 #-- 自動ログオン設定 end --#
 
