@@ -23,7 +23,7 @@ function Install-WindowsUpdate(){
 
     if($WUpatch){
         Get-WUInstall -AcceptAll -IgnoreReboot
-        # shutdown -r -t 0 -f
+        shutdown -r -t 0 -f
     } else {
         Remove-Task
         Disable-AutoLogon
