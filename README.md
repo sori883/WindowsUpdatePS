@@ -17,5 +17,3 @@
 Windows 7  
 Windows 10  
 
-## 起動はWOLでやろう！
-[https://github.com/sori883/WindowsUpdatePS](https://github.com/sori883/WindowsUpdatePS)
